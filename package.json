@@ -1,0 +1,33 @@
+{
+  "name": "redux-calculator",
+  "version": "1.0.0",
+  "description": "Calculator app written using React and Redux",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimboKZ/redux-calculator.git"
+  },
+  "author": "Timur Kuzhagaliyev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimboKZ/redux-calculator/issues"
+  },
+  "homepage": "https://github.com/TimboKZ/redux-calculator#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.9.3",
+    "react-hot-loader": "^3.0.0-beta.3",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
+}
