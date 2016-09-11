@@ -6,10 +6,12 @@
  * @version 0.0.1
  */
 
+import './styles/style.sass';
+/* tslint ignore:no-unused-variable */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {App} from './App.tsx';
+import {AppContainer} from './containers/app-container';
 
 let root = document.getElementById('root');
 
-ReactDOM.render(<App/>, root);
+ReactDOM.render(<AppContainer/>, root);
