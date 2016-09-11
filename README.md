@@ -1,2 +1,2 @@
-# redux-calcultor
-A simple calculator app written in TypeScript using React and Redux.
+# Redux Calculator
+A simple calculator app written in TypeScript using React and Redux. I wrote it as an exercise to familiarise myself with Redux so if you are planning to use this repository as a reference please keep in mind that there might be some incorrect implementations in the code.
