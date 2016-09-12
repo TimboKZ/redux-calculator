@@ -7,7 +7,6 @@
  */
 
 import {IArithmeticAction, IAction, ADD, SUBTRACT, MULTIPLY, DIVIDE, RESET} from '../actions/calculator';
-import objectAssign from 'object-assign';
 
 /**
  * Calculator state interface
@@ -29,7 +28,7 @@ const initialCalculatorState: ICalculatorState = {
  * Calculator reducer
  */
 export function calculator(state: ICalculatorState = initialCalculatorState, action: IAction): ICalculatorState {
-    switch (action) {
+    switch (action.type) {
         case ADD:
             return arithmeticReducer((x, y) => x + y);
         case SUBTRACT:
@@ -39,16 +38,16 @@ export function calculator(state: ICalculatorState = initialCalculatorState, act
         case DIVIDE:
             return arithmeticReducer((x, y) => x / y);
         case RESET:
-            return objectAssign({}, state, initialCalculatorState);
+            return Object.assign({}, state, initialCalculatorState);
         default:
             return state;
     }
 
-    function arithmeticReducer(operation: (num: number, num: number) => number): ICalculatorState {
+    function arithmeticReducer(operation: (x: number, y: number) => number): ICalculatorState {
         let arithmeticAction: IArithmeticAction = action as IArithmeticAction;
         let newNumber = operation(state.number, arithmeticAction.number);
         let newHistory = [...state.history, arithmeticAction];
-        return objectAssign({}, state, {
+        return Object.assign({}, state, {
             number: newNumber,
             history: newHistory,
         });

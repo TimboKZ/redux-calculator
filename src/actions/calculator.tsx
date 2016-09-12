@@ -20,7 +20,6 @@ export const RESET = 'RESET';
  */
 export interface IAction {
     type: string;
-    [key: string]: any;
 }
 
 /**
