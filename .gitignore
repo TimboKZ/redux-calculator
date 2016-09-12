@@ -1,6 +1,9 @@
 # JetBrains IDE data
 .idea
 
+# TypeScript Typings
+typings
+
 # Logs
 logs
 *.log

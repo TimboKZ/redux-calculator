@@ -9,9 +9,21 @@
 import './styles/style.sass';
 /* tslint ignore:no-unused-variable */
 import * as React from 'react';
+import {createStore} from 'redux';
+import {calculator} from 'reducers/calculator';
+import {Provider} from 'react-redux';
+import {App} from 'components/app';
 import * as ReactDOM from 'react-dom';
-import {AppContainer} from './containers/app-container';
 
+/**
+ * Initialising that sweet Redux store and getting the root element for React
+ */
+let store = createStore(calculator);
 let root = document.getElementById('root');
 
-ReactDOM.render(<AppContainer/>, root);
+ReactDOM.render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    root
+);
